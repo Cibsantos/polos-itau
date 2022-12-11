@@ -1,0 +1,42 @@
+<header>
+    <div class="header">
+        <span class="header-logo">
+            <img width="100" height="50" src="assets/images/itau-bba-logo.png">
+        </span>
+
+        <span class="header-options">
+            <mat-form-field class="header-options--menu">
+                <mat-select [(value)]="langagues[0].value">
+                    <mat-option *ngFor="let langague of langagues" [value]="langague.value">
+                        {{langague.description}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-divider [vertical]="true"></mat-divider>
+            <div class="header-user">
+                <button mat-button [matMenuTriggerFor]="menuUser">
+                    <div class="menu-user">
+                        <div class="photo">
+                            <ngx-avatar *ngIf="!user?.photo" size="45" [round]="false"
+                                name="Cibele Santos"></ngx-avatar>
+                        </div>
+                        <span class="name">Cibele Santos</span>
+                        <mat-icon>expand_more</mat-icon>
+                    </div>
+                </button>
+                <mat-menu #menuUser="matMenu" xPosition="before">
+                    <button class="user-content-button" mat-menu-item>
+                        <mat-icon>account_circle</mat-icon>
+                        Perfil
+                    </button>
+                    <button class="user-content-button" mat-menu-item>
+                        <mat-icon>arrow_back</mat-icon>
+                        Sair
+                    </button>
+                </mat-menu>
+
+
+            </div>
+        </span>
+    </div>
+</header>
