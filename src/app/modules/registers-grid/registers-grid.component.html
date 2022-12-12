@@ -1,0 +1,75 @@
+<div class="grid">
+    <span class="grid-header">
+        <div class="grid-header-title">
+            <h3><strong>{{ "title" | translate: {name: "" } }}</strong></h3>
+            <h4>{{ "subTitle" | translate: { } }}</h4>
+        </div>
+
+        <form class="grid-form" [formGroup]="filterForm">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <input matInput placeholder="Pesquisar" formControlName="name">
+            </mat-form-field>
+        </form>
+    </span>
+
+    <mat-card>
+        <mat-card-content class="grid-card">
+            <perfect-scrollbar class="ps-show-always">
+                <table mat-table [dataSource]="registers" matSort>
+
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header style="cursor: pointer">
+                            {{ "name" | translate: { } }}
+                        </th>
+
+                        <td mat-cell *matCellDef="let element">
+                            {{element.name}}
+                        </td>
+
+                    </ng-container>
+                    <ng-container matColumnDef="business">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header style="cursor: pointer">
+                            {{ "business" | translate: { } }}
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.business}}
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="valuation">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header style="cursor: pointer">
+                            {{ "valuation" | translate: { } }}
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{"currency" | translate: { } }} {{
+                            element.valuation.toLocaleString(formatedCurrency)
+                            }}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="situation">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header style="cursor: pointer">
+                            {{ "situation" | translate: { } }}
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div [style.background-color]="element.active ? '#05ff1e' : '#ff0505'" id="active">
+                                .
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="actions">
+                        <th mat-header-cell *matHeaderCellDef>{{ "actions" | translate: { } }}</th>
+
+                    </ng-container>
+
+
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+            </perfect-scrollbar>
+            <mat-paginator [length]="10" [pageSize]="10" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+            </mat-paginator>
+        </mat-card-content>
+    </mat-card>
+</div>
