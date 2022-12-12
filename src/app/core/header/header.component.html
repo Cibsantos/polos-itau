@@ -6,19 +6,20 @@
 
         <span class="header-options">
             <mat-form-field class="header-options--menu">
-                <mat-select [(value)]="langagues[0].value">
-                    <mat-option *ngFor="let langague of langagues" [value]="langague.value">
+                <mat-label>Idioma</mat-label>
+                <mat-select (selectionChange)="changeLanguage($event)">
+                    <mat-option *ngFor="let langague of langagues" [value]="langague.translate">
                         {{langague.description}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
             <mat-divider [vertical]="true"></mat-divider>
-            <div class="header-user">
+            <span class="header-options-user">
                 <button mat-button [matMenuTriggerFor]="menuUser">
                     <div class="menu-user">
                         <div class="photo">
-                            <ngx-avatar *ngIf="!user?.photo" size="45" [round]="false"
-                                name="Cibele Santos"></ngx-avatar>
+                            <ngx-avatar *ngIf="!user?.photo" size="45" [round]="false" name="Cibele Santos"
+                                [round]="true"></ngx-avatar>
                         </div>
                         <span class="name">Cibele Santos</span>
                         <mat-icon>expand_more</mat-icon>
@@ -34,9 +35,7 @@
                         Sair
                     </button>
                 </mat-menu>
-
-
-            </div>
+            </span>
         </span>
     </div>
 </header>

@@ -17,6 +17,7 @@ header {
 
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
     &-logo {
       align-items: flex-start;
     }
@@ -41,4 +42,10 @@ header {
       }
     }
   }
+}
+.menu-user {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-around;
+  width: 10em;
 }
