@@ -5,18 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
+import { RegistersGridModule } from './modules/registers-grid/registers-grid.module';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ApiInterceptor } from './guards/api.interceptor';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    RegistersGridModule,
+    HttpClientModule,
+    TranslateModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
