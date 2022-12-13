@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AbstractControl, UntypedFormArray, UntypedFormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-
+import { CEP_MASK, CNPJ_MASK } from '../constants/masks.constants';
 
 @Injectable()
 export class BaseFormComponent {
   constructor(private snackBar: MatSnackBar) { }
 
+  cep_mask = CEP_MASK;
+  cnpj_mask = CNPJ_MASK;
   hasError(formControl: AbstractControl, errorName: string) {
     return (formControl.dirty || formControl.touched) && formControl.hasError(errorName);
   }
