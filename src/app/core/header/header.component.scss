@@ -14,6 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1em;
 
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -37,7 +38,7 @@ header {
 
       mat-divider {
         background-color: rgb(10, 10, 10);
-        height: 5em;
+        height: 6em;
         margin: 1em;
       }
     }
@@ -47,5 +48,14 @@ header {
   display: flex !important;
   align-items: center;
   justify-content: space-around;
-  width: 10em;
+  width: 14em;
+}
+.name {
+  color: rgb(46, 46, 46);
+  font-size: 12px;
+  font-weight: 500;
+  &-office {
+    color: rgb(117, 117, 117);
+    font-size: 10px;
+  }
 }

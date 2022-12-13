@@ -6,7 +6,7 @@
 
         <span class="header-options">
             <mat-form-field class="header-options--menu">
-                <mat-label>Idioma</mat-label>
+                <mat-label>{{ "languague" | translate: { } }}</mat-label>
                 <mat-select (selectionChange)="changeLanguage($event)">
                     <mat-option *ngFor="let langague of langagues" [value]="langague.translate">
                         {{langague.description}}
@@ -15,26 +15,18 @@
             </mat-form-field>
             <mat-divider [vertical]="true"></mat-divider>
             <span class="header-options-user">
-                <button mat-button [matMenuTriggerFor]="menuUser">
-                    <div class="menu-user">
-                        <div class="photo">
-                            <ngx-avatar *ngIf="!user?.photo" size="45" [round]="false" name="Cibele Santos"
-                                [round]="true"></ngx-avatar>
-                        </div>
-                        <span class="name">Cibele Santos</span>
-                        <mat-icon>expand_more</mat-icon>
+
+                <div class="menu-user">
+                    <div class="photo">
+                        <ngx-avatar *ngIf="!user?.photo" size="45" [round]="false" name="John Doe"
+                            [round]="true"></ngx-avatar>
                     </div>
-                </button>
-                <mat-menu #menuUser="matMenu" xPosition="before">
-                    <button class="user-content-button" mat-menu-item>
-                        <mat-icon>account_circle</mat-icon>
-                        Perfil
-                    </button>
-                    <button class="user-content-button" mat-menu-item>
-                        <mat-icon>arrow_back</mat-icon>
-                        Sair
-                    </button>
-                </mat-menu>
+                    <div class="name">
+                        John Doe
+                        <p class="name_office">{{ "office" | translate: { } }}</p>
+                    </div>
+                </div>
+
             </span>
         </span>
     </div>
