@@ -1,0 +1,59 @@
+.modal-edition-copa8-fieldset {
+  gap: 1rem;
+  border: 1px solid #0000001f;
+  padding: 0 1rem 1rem;
+  border-radius: 5px;
+}
+
+.modal-edition-copa8-legend {
+  padding: 0 10px;
+  float: unset;
+  width: auto;
+  margin: 0 0 0 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modal-edition-copa8 {
+  fieldset:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+  &__general-data {
+    @extend .modal-edition-copa8-fieldset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    legend {
+      @extend .modal-edition-copa8-legend;
+    }
+
+    .active-field {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__address {
+    @extend .modal-edition-copa8-fieldset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+
+    legend {
+      @extend .modal-edition-copa8-legend;
+    }
+  }
+
+  &__contact {
+    @extend .modal-edition-copa8-fieldset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    font-size: 1rem;
+    font-weight: 600;
+
+    legend {
+      @extend .modal-edition-copa8-legend;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+<app-modal-container [title]="title" [subTitle]="subTitle" [textOk]="textOk" [isLoading]="isLoading"
+    [hideCancel]="readonly" (confirmAction)="save()">
+    <div [formGroup]="formHub" modal-container class="modal-edition-copa8">
+        <fieldset class="modal-edition-copa8__general-data">
+            <legend> {{ "detailsAdress" | translate: { } }}</legend>
+
+            <mat-form-field>
+                <mat-label>{{ "zipCode" | translate: { } }}</mat-label>
+                <input matInput formControlName="zipCode" autocomplete="off" [mask]="cep_mask" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>{{ "street" | translate: { } }}</mat-label>
+                <input matInput formControlName="street" />
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>{{ "district" | translate: { } }}</mat-label>
+                <input matInput formControlName="district" autocomplete="off" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{ "state" | translate: { } }}</mat-label>
+                <input matInput formControlName="state" autocomplete="off" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>{{ "city" | translate: { } }}</mat-label>
+                <input matInput formControlName="city" autocomplete="off" />
+            </mat-form-field>
+
+
+        </fieldset>
+
+        <fieldset class="modal-edition-copa8__address">
+            <legend>{{ "detailsBusiness" | translate: { } }} </legend>
+
+            <mat-form-field class="state">
+                <mat-label>{{ "name" | translate: { } }}</mat-label>
+                <input matInput formControlName="name" autocomplete="off" />
+            </mat-form-field>
+
+            <mat-form-field class="state">
+                <mat-label>{{ "business" | translate: { } }}</mat-label>
+                <input matInput formControlName="business" autocomplete="off" />
+            </mat-form-field>
+
+            <mat-form-field class="state">
+                <mat-label>{{ "valuation" | translate: { } }}</mat-label>
+                <input matInput formControlName="valuation" autocomplete="off" />
+            </mat-form-field>
+
+            <mat-form-field class="state">
+                <mat-label>CNPJ</mat-label>
+                <input matInput formControlName="cnpj" autocomplete="off" [mask]="cnpj_mask" />
+            </mat-form-field>
+
+            <mat-form-field class="state">
+                <mat-label>{{ "active" | translate: { } }}</mat-label>
+                <mat-select formControlName="active">
+                    <mat-option [value]="true">
+                        {{ "yes" | translate: { } }}
+                    </mat-option>
+                    <mat-option [value]="false">
+                        {{ "noe" | translate: { } }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </fieldset>
+
+    </div>
+</app-modal-container>
