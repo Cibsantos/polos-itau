@@ -1,27 +1,61 @@
-# PolosItau
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+<h1 align ="center"> ITAÚ BBA </h1> 
 
-## Development server
+<p align="center">Teste para criação de grid com lista de Polos Itaú </p>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<span style="text-center" align ="center">
+    <img src="https://img.shields.io/static/v1?label=Angular&message= 14.2.3&color=006D76&style=flat"/>
+    <img src="https://img.shields.io/static/v1?label=Angular Material&message=13.0.0&color=006D76&style=flat"/>
+</span>
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h1 id = "sobre"> :green_book: Sobre </h1>  
+ <p> Projeto para teste de conhecimento visando demonstrar a capacidade com CRUD, internacionalização, uso do Material UI e organização do projeto.
 
-## Build
+Esse projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.3 </p>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Servidor de Desenvolvimento
 
-## Running unit tests
+Na raiza do projeto execute `ng serve`, navegue até `http://localhost:4200/`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Detalhes do Projeto
 
-## Running end-to-end tests
+Grid com a Lista de registros. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image](https://user-images.githubusercontent.com/67697559/207309618-07ac5fa4-493a-405f-b681-b8306853dafb.png)
 
-## Further help
+Opção de Mudança de idioma 
+![image](https://user-images.githubusercontent.com/67697559/207309889-073da538-fcb3-4897-89cd-ec47a491d10e.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Detalhes de Cada Polo do Itaú
+![image](https://user-images.githubusercontent.com/67697559/207310005-9d22ec7e-0d32-49f5-aaf5-d0dd4a48a7b8.png)
+
+O projeto também conta com:
+
+Pesquisa de um polo especifico 
+![image](https://user-images.githubusercontent.com/67697559/207310100-9b135a98-7bdd-4e05-bab5-79ea41f4a74b.png)
+
+Odenação nas colunas de Nome, Empresa e Valor:
+![image](https://user-images.githubusercontent.com/67697559/207310186-cf74bbf9-f2dc-4c72-894a-24e92396322b.png)
+
+
+
+
+<h1 id = "autora">  :pencil2: Autora </h1>
+<div align= "center">
+<div>
+    <p>
+        Desenvolvido com :heart: por <a href = "https://github.com/Cibsantos"> Cibele Santos </a> 
+        entre em contato :muscle:
+    </p>   
+</div>
+<span>
+    <img src ="https://img.shields.io/static/v1?label=&message=Cibsantos&color=000000&logo=github" />
+    <img src ="https://img.shields.io/static/v1?label=&message=Cibelesantoscs&color=0b4cff&logo=linkedin" />
+    <img src ="https://img.shields.io/static/v1?label=&message=cibele.santosgecom@gmail.com&color=f11212&logo=gmail" />
+</span>
+<h1 id = "agradecimentos"> :clap: Agradecimentos </h1>
+
+Obrigada pela oportunidade de demonstrar meus conhecimentos, espero que gostem do projeto 
+e qualquer dúvida me coloco á disposição. 
+</div>
