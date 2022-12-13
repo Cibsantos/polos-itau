@@ -20,4 +20,10 @@ export class ApiService {
             httpOptions,
         );
     }
+    getRegisterById(id: number | undefined): Observable<IApiResponseGrid[]> {
+        return this.http.get<IApiResponseGrid[]>(
+            `${environment.api}/itau_teste/${id}`,
+            httpOptions,
+        );
+    }
 }
