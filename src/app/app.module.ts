@@ -21,7 +21,7 @@ import { TranslateModule } from '@ngx-translate/core';
     CoreModule,
     RegistersGridModule,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiInterceptor, multi: true },

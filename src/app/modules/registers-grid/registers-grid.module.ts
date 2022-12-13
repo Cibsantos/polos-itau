@@ -4,6 +4,7 @@ import { RegistersGridComponent } from './registers-grid.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/shared/material.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { RegisterHubModule } from '../register-hub/register-hub.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TranslateModule } from '@ngx-translate/core';
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
-    TranslateModule
+    TranslateModule,
+    RegisterHubModule
 
   ],
   providers: [],

@@ -12,6 +12,8 @@ import {
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+import { ModalContainerComponent } from './components/modal-container/modal-container.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     useBothWheelAxes: true,
@@ -22,6 +24,8 @@ export function createTranslateLoader(http: HttpClient) {
 }
 @NgModule({
     declarations: [
+        ModalContainerComponent,
+        LoadingComponent
     ],
     imports: [
         BrowserModule,
@@ -46,6 +50,6 @@ export function createTranslateLoader(http: HttpClient) {
             useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
         },
     ],
-    exports: [MaterialModule, PerfectScrollbarModule]
+    exports: [MaterialModule, PerfectScrollbarModule, ModalContainerComponent, LoadingComponent]
 })
 export class SharedModule { }
