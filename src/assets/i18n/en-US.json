@@ -9,5 +9,21 @@
     "actions": "Actions",
     "itemsPerPage": "Items Per Page",
     "currency": "$",
-    "currencyStyle": "USD"
+    "currencyStyle": "USD",
+    "hub": "Hub",
+    "subTitleHub": "displaying pole details",
+    "detailsAdress": "Address Details",
+    "detailsBusiness": "Company Details",
+    "back": "Return",
+    "save": "Save",
+    "zipCode": "Zip Code",
+    "street": "Name of the street",
+    "district": "District",
+    "state": "State",
+    "city": "City",
+    "active": "Active",
+    "yes": "Yes",
+    "no": "Não",
+    "languague": "Language",
+    "office": "Itaú BBA Director"
 }

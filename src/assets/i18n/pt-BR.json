@@ -9,5 +9,21 @@
     "actions": "Ações",
     "itemsPerPage": "Items por Página",
     "currency": "R$",
-    "currencyStyle": "BRL"
+    "currencyStyle": "BRL",
+    "hub": "Polo",
+    "subTitleHub": "exibindo detalhes do polo",
+    "detailsAdress": "Detalhes do Endereço",
+    "detailsBusiness": "Detalhes da Empresa",
+    "back": "Voltar",
+    "save": "Salvar",
+    "zipCode": "CEP",
+    "street": "Nome da Rua",
+    "district": "Bairro",
+    "state": "Estado",
+    "city": "Cidade",
+    "active": "Ativo",
+    "yes": "Sim",
+    "no": "Não",
+    "languague": "Idioma",
+    "office": "Diretor Itaú BBA "
 }
