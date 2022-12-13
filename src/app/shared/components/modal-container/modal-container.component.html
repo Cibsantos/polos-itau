@@ -1,0 +1,34 @@
+<div class="custom-modal">
+  <span class="header">
+    <div>
+      <h1 mat-dialog-title>{{title}}</h1>
+      <h3 mat-dialog-title>{{subTitle}}</h3>
+    </div>
+    <mat-icon mat-dialog-close>close</mat-icon>
+  </span>
+
+  <mat-divider></mat-divider>
+
+  <div mat-dialog-content class="content">
+    <div *ngIf="isLoading" class="centered">
+      <app-loading [diameter]="80" [strokeWidth]="10"></app-loading>
+    </div>
+
+    <ng-content *ngIf="!isLoading" select="[modal-container]"></ng-content>
+  </div>
+
+  <mat-divider class="mb-0"></mat-divider>
+
+  <div class="modal-actions" mat-dialog-actions align="end">
+    <button *ngIf="!hideCancel" mat-flat-button mat-dialog-close color="info" [disabled]="isLoading || disableCancel">
+      {{textCancel}}
+    </button>
+    <button *ngIf="textOptionalButton" mat-flat-button color="primary" [disabled]="isLoading || disableOptional"
+      (click)="optionalButtonEvent()">
+      <i *ngIf="optionalButtonIcon" [class]="optionalButtonIcon"></i> {{textOptionalButton}}
+    </button>
+    <button mat-flat-button color="primary" [disabled]="isLoading || disableOk" (click)="confirm()">
+      {{textOk}}
+    </button>
+  </div>
+</div>
