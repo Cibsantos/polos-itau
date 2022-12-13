@@ -30,7 +30,7 @@ export class BaseRegisters extends BaseFormComponent {
         ordenacao: '',
     };
 
-    constructor(snackBar: MatSnackBar, private fb: UntypedFormBuilder) {
+    constructor(snackBar: MatSnackBar, public fb: UntypedFormBuilder) {
         super(snackBar);
         this.buildForm();
     }
